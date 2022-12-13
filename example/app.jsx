@@ -10,12 +10,12 @@ import "./example.css";
 
 function App() {
   const sketches = useMemo(
-    () => [box.sketch, torus.sketch, plane.sketch,video.sketch],
-    [box, torus, plane, video]
+    () => [video.sketch, box.sketch, torus.sketch, plane.sketch],
+    [video, box, torus, plane]
   );
   const [state, setState] = useState({
-    rotation: 160,
-    sketch: box.sketch,
+    rotation: 0,
+    sketch: video.sketch,
     unmount: false
   });
   const onChangeSketch = useCallback(() => {
@@ -43,7 +43,7 @@ function App() {
         rotation: parseInt(event.target.value, 10)
       }));
     },
-    [box, plane, torus, video]
+    [video, box, plane, torus]
   );
 
   if (state.unmount) {
