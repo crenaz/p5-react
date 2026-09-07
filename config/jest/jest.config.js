@@ -17,5 +17,6 @@ export default {
     ]
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
-  testEnvironment: join(fileDirectory, "jest.environment.js")
+  testEnvironment: join(fileDirectory, "jest.environment.js"),
+  setupFiles: ["jest-canvas-mock"]
 };

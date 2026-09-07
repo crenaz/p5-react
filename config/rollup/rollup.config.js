@@ -4,7 +4,10 @@ import { dirname, join } from "path";
 import typescriptEngine from "typescript";
 import { fileURLToPath } from "url";
 
-import packageJSON from "../../package.json" assert { type: "json" };
+import { readFileSync } from "fs";
+const packageJSON = JSON.parse(
+  readFileSync(new URL("../../package.json", import.meta.url), "utf-8")
+);
 
 const filePath = fileURLToPath(import.meta.url);
 const fileDirectory = dirname(filePath);
