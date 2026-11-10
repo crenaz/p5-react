@@ -64,17 +64,17 @@
   },
   "dependencies": {
     "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^12.3.0",
+    "@rollup/plugin-typescript": "^12.3.1",
     "microdiff": "^1.6.0",
     "p5": "^1.11.13",
-    "serialize-javascript": "^7.1.2"
+    "serialize-javascript": "^7.1.4"
   },
   "peerDependencies": {
     "react": ">= 17.0.2",
     "react-dom": ">= 17.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.7",
+    "@babel/core": "^7.29.13",
     "@babel/preset-env": "^7.29.7",
     "@babel/preset-react": "^7.29.7",
     "@babel/preset-typescript": "^7.29.7",
@@ -84,8 +84,8 @@
     "@types/p5": "^1.7.7",
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
-    "@typescript-eslint/eslint-plugin": "^8.71.1",
-    "@typescript-eslint/parser": "^8.71.1",
+    "@typescript-eslint/eslint-plugin": "^8.72.2",
+    "@typescript-eslint/parser": "^8.72.2",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.5",
     "eslint": "^8.57.1",
@@ -101,15 +101,15 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rimraf": "^3.0.2",
-    "rollup": "^4.64.0",
+    "rollup": "^4.68.2",
     "style-loader": "^4.0.0",
-    "ts-jest": "^29.4.14",
+    "ts-jest": "^29.4.15",
     "ts-loader": "^9.6.2",
-    "tslib": "^2.8.1",
+    "tslib": "^2.9.1",
     "typescript": "^5.9.3",
-    "webpack": "^5.111.1",
+    "webpack": "^5.112.2",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.6"
+    "webpack-dev-server": "^5.2.7"
   },
   "pnpm": {
     "overrides": {
