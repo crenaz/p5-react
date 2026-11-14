@@ -1,0 +1,32 @@
+diff --git a/dist/cjs.js b/dist/cjs.js
+index 7c36cbdd06cc22c92d590be3f87a08a91ca06b40..073da52773b9793c863df8d11f40fd70dd74b270 100644
+--- a/dist/cjs.js
++++ b/dist/cjs.js
+@@ -84,6 +84,11 @@ function mergeObject(target, source, options) {
+ 		});
+ 	}
+ 	getKeys(source).forEach(function(key) {
++		// Assigning this key to a plain object changes its prototype.
++		if (key === '__proto__') {
++			return
++		}
++
+ 		if (propertyIsUnsafe(target, key)) {
+ 			return
+ 		}
+diff --git a/index.js b/index.js
+index 77968aed5d456cccc294f60912ef381fa1e52a7b..00d8cf4deff5da7d441c184ec3d28d042b2f129b 100644
+--- a/index.js
++++ b/index.js
+@@ -59,6 +59,11 @@ function mergeObject(target, source, options) {
+ 		})
+ 	}
+ 	getKeys(source).forEach(function(key) {
++		// Assigning this key to a plain object changes its prototype.
++		if (key === '__proto__') {
++			return
++		}
++
+ 		if (propertyIsUnsafe(target, key)) {
+ 			return
+ 		}
